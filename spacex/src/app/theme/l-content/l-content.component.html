@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="card-header border-0">
+    <h3>Filters</h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12 mb-1">
+        <h4 class="border-bottom text-center">Launch Year</h4>
+      </div>
+      <div class="col-6 mb-2" *ngFor="let item of lYears">
+        <button
+          class="btn btn-sm bg-orange pr-4 pl-4"
+          [class.bg-orange]="appService.year === item"
+          [class.bg-light_orange]="appService.year !== item"
+          (click)="appService.setYear(item)"
+        >
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-1">
+        <h4 class="border-bottom text-center">Successful Launch</h4>
+      </div>
+      <div class="col-6 mb-2" *ngFor="let item of sLaunch">
+        <button
+          class="btn btn-sm pr-4 pl-4"
+          [class.bg-orange]="appService.launch === item"
+          [class.bg-light_orange]="appService.launch !== item"
+          (click)="appService.setSLaunch(item)"
+        >
+          {{ item }}
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 mb-1">
+        <h4 class="border-bottom text-center">Successful Landing</h4>
+      </div>
+      <div class="col-6 mb-2" *ngFor="let item of sLanding">
+        <button
+          class="btn btn-sm pr-4 pl-4"
+          [class.bg-orange]="appService.land === item"
+          [class.bg-light_orange]="appService.land !== item"
+          (click)="appService.setSLand(item)"
+        >
+          {{ item }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

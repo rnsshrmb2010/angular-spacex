@@ -1,0 +1,32 @@
+@import '/src/styles.scss';
+
+.card-layout {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  @include media(xl) {
+    flex: 0 0 25%;
+    max-width: 25%;
+    @include media(lg) {
+      flex: 0 0 25%;
+      max-width: 25%;
+      @include media(md) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        @include media(sm) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+img {
+  width: 100%;
+}
+.header {
+  font-size: 1.5rem;
+  font-weight: 500;
+}

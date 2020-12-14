@@ -1,0 +1,23 @@
+<main>
+  <div class="col">
+    <div class="row">
+      <div class="col-12">
+        <h1>SpaceX Launch Programs</h1>
+      </div>
+      <div class="left-content">
+        <slp-l-content></slp-l-content>
+      </div>
+      <div class="right-content">
+        <router-outlet *ngIf="appService.getContentLoaded()"></router-outlet>
+        <div *ngIf="!appService.getContentLoaded()">
+          Loading Content. Please wait...
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="mastfoot mt-auto">
+  <div class="inner">
+    <h3 class="text-center">Developed by: Hanamantraya Rajashekhar</h3>
+  </div>
+</footer>

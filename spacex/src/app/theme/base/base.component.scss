@@ -1,0 +1,50 @@
+@import '/src/styles.scss';
+
+.left-content {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include media(xl) {
+    flex: 0 0 20%;
+    max-width: 20%;
+    @include media(lg) {
+      flex: 0 0 25%;
+      max-width: 25%;
+      @include media(md) {
+        flex: 0 0 30%;
+        max-width: 30%;
+        @include media(sm) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.right-content {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include media(xl) {
+    flex: 0 0 80%;
+    max-width: 80%;
+    @include media(lg) {
+      flex: 0 0 75%;
+      max-width: 75%;
+      @include media(md) {
+        flex: 0 0 70%;
+        max-width: 70%;
+        @include media(sm) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: 1rem !important;
+        }
+      }
+    }
+  }
+}
