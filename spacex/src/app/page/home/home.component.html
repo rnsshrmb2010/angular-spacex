@@ -1,39 +1,35 @@
-<div class="row">
-  <div class="mb-3" *ngIf="launchData.length === 0">
+<div class="row" *ngIf="launchData.length === 0">
+  <div class="mb-3">
     <h3>No Result Found</h3>
   </div>
-  <div class="card-layout mb-3" *ngFor="let item of launchData">
-    <div class="card">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-12 text-center mb-4">
-            <img src="{{ item.links.mission_patch_small }}" alt="" />
-          </div>
-          <div class="col-12">
-            <h4 class="text-primary">
-              {{ item.mission_name }} #{{ item.flight_number }}
-            </h4>
-            <p><span class="header">Mission Ids:</span></p>
-            <ul>
-              <li *ngFor="let m of item.mission_id">{{ m }}</li>
-            </ul>
-            <p>
-              <span class="header">Launch Year:</span
-              ><span>{{ item.launch_year }}</span>
-            </p>
-            <p>
-              <span class="header">Successful Launch:</span
-              ><span>{{ item.launch_success ? 'True' : 'False' }}</span>
-            </p>
-            <p>
-              <span class="header">Successful Landing:</span>
-              <span>{{
-                item.rocket.first_stage.cores[0].land_success ? 'True' : 'False'
-              }}</span>
-            </p>
-          </div>
-        </div>
-      </div>
+</div>
+<div class="row">
+  <div class="card-layout mb" *ngFor="let item of launchData">
+    <div class="text-center mb-4">
+      <img src="{{ item.links.mission_patch_small }}" alt="" />
+    </div>
+    <div>
+      <p class="text-pink2">
+        <span> {{ item.mission_name }} #{{ item.flight_number }} </span>
+      </p>
+      <p><span class="header">Mission Ids:</span></p>
+      <ul>
+        <li *ngFor="let m of item.mission_id">{{ m }}</li>
+      </ul>
+      <p>
+        <span class="header">Launch Year:</span
+        ><span>{{ item.launch_year }}</span>
+      </p>
+      <p>
+        <span class="header">Successful Launch:</span
+        ><span>{{ item.launch_success ? 'True' : 'False' }}</span>
+      </p>
+      <p>
+        <span class="header">Successful Landing:</span>
+        <span>{{
+          item.rocket.first_stage.cores[0].land_success ? 'True' : 'False'
+        }}</span>
+      </p>
     </div>
   </div>
 </div>

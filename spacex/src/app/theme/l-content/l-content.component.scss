@@ -1,5 +1,19 @@
+@import '/src/styles.scss';
 .btn {
-  color: black;
+  width: 110px;
+  color: $black;
   font-weight: 500;
   box-shadow: none;
+  background-color: $light_orange;
+  font-size: $h4-font-size;
+  &.active,
+  &:hover {
+    background-color: $orange;
+    color: $black;
+    box-shadow: none;
+  }
+}
+
+.font-bold {
+  font-weight: 900;
 }

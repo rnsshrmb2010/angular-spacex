@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header border-0">
-    <h3>Filters</h3>
+    <h4 class="font-bold">Filters</h4>
   </div>
   <div class="card-body">
     <div class="row">
@@ -9,9 +9,8 @@
       </div>
       <div class="col-6 mb-2" *ngFor="let item of lYears">
         <button
-          class="btn btn-sm bg-orange pr-4 pl-4"
-          [class.bg-orange]="appService.year === item"
-          [class.bg-light_orange]="appService.year !== item"
+          class="btn btn-sm pr-4 pl-4"
+          [class.active]="appService.year === item"
           (click)="appService.setYear(item)"
         >
           {{ item }}
