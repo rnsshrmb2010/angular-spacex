@@ -12,6 +12,21 @@
     color: $black;
     box-shadow: none;
   }
+
+  @include media(xl) {
+    width: 110px;
+    @include media(lg) {
+      width: 110px;
+      @include media(md) {
+        font-size: $h6-font-size;
+        width: 90px;
+        @include media(sm) {
+          width: 90px;
+          font-size: $h6-font-size;
+        }
+      }
+    }
+  }
 }
 
 .font-bold {
